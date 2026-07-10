@@ -96,7 +96,7 @@ import {
 import WaveDivider from "./WaveDivider.vue";
 import type { Hitokoto, BingWallpaper, BlogInfo } from "../types";
 import {
-  getBlogInfo,
+  blogInfo as blogInfoData,
   socialLinks,
   hitokotos,
   bingWallpapers,
@@ -106,7 +106,7 @@ import BilibiliIcon from "@/components/icons/Bilibili.vue";
 const infoBoxRef = ref<HTMLElement | null>(null);
 const currentHitokotoIndex = ref<number>(0);
 const currentHitokoto = ref<Hitokoto>(hitokotos[0]);
-const blogInfo = ref<BlogInfo>({ name: "My Blog", welcomeText: "Welcome!", avatar: "" });
+const blogInfo = ref<BlogInfo>(blogInfoData);
 const authorOpacity = ref<number>(1);
 let hitokotoTimer: ReturnType<typeof setInterval> | null = null;
 
@@ -215,10 +215,7 @@ const handleKeydown = (e: KeyboardEvent): void => {
   }
 };
 
-onMounted(async () => {
-  // 从后端获取博客信息（头像）
-  blogInfo.value = await getBlogInfo();
-
+onMounted(() => {
   hitokotoTimer = setInterval(rotateHitokoto, 5000);
 
   window.addEventListener("keydown", handleKeydown);

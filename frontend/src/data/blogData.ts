@@ -1,5 +1,5 @@
 import type { NavLink, SocialLink, Hitokoto, BlogInfo, BingWallpaper } from '../types'
-import { API_BLOG_INFO } from '../config/api'
+import { API_BASE } from '../config/api'
 
 export const navLinks: NavLink[] = [
   { name: "首页", path: "/" },
@@ -11,7 +11,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: "github", url: "https://github.com/your-username", icon: "github" },
+  { name: "github", url: "https://github.com/yyuaN-pc", icon: "github" },
   { name: "bilibili", url: "https://space.bilibili.com/your-uid", icon: "bilibili" },
 ];
 
@@ -25,19 +25,14 @@ export const hitokotos: Hitokoto[] = [
   { text: "你有飘散的长发，我有手臂，笔直地举起。", author: "北岛" },
 ];
 
-// 从后端获取博客信息（头像等）
-let _blogInfo: BlogInfo | undefined;
+// 博客基本信息（硬编码，与页面同步加载，无需等待 API）
+const avatarUrl = `${API_BASE}/api/files/blog_infos/avatars/a_01.png`;
 
-export async function getBlogInfo(): Promise<BlogInfo> {
-  if (_blogInfo) return _blogInfo;
-  try {
-    const res = await fetch(API_BLOG_INFO);
-    _blogInfo = await res.json() as BlogInfo;
-  } catch {
-    _blogInfo = { name: "My Blog", welcomeText: "Welcome!", avatar: "" };
-  }
-  return _blogInfo!;
-}
+export const blogInfo: BlogInfo = {
+  name: "Yuan",
+  welcomeText: "Welcome!",
+  avatar: avatarUrl,
+};
 
 export const bingWallpapers: BingWallpaper[] = [
   {
