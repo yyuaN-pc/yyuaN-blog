@@ -1,18 +1,4 @@
 # ─────────────────────────────────────────────
-# 个人内容（克隆项目后自行添加）
-# ─────────────────────────────────────────────
-# 笔记、照片、音乐文件
-backend/content/notes/
-backend/content/photos/
-backend/content/music/*.mp3
-backend/content/music/*.json
-backend/content/blog_infos/avatars/
-backend/content/blog_infos/user-config.json
-
-# 评论数据
-backend/data/comments.json
-
-# ─────────────────────────────────────────────
 # 依赖
 # ─────────────────────────────────────────────
 node_modules/

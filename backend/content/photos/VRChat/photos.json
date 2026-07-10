@@ -1,0 +1,44 @@
+{
+  "photos": [
+    {
+      "url": "VRChat_2026-07-04_01.png",
+      "title": "VRChat截图1",
+      "date": "2026-07-04",
+      "location": "VRChat",
+      "photographer": "yyuan",
+      "description": "VRChat虚拟世界截图"
+    },
+    {
+      "url": "VRChat_2026-07-04_02.png",
+      "title": "VRChat截图2",
+      "date": "2026-07-04",
+      "location": "VRChat",
+      "photographer": "yyuan",
+      "description": "VRChat虚拟世界截图"
+    },
+    {
+      "url": "VRChat_2026-07-04_03.png",
+      "title": "VRChat截图3",
+      "date": "2026-07-04",
+      "location": "VRChat",
+      "photographer": "yyuan",
+      "description": "VRChat虚拟世界截图"
+    },
+    {
+      "url": "VRChat_2026-07-07_01.png",
+      "title": "VRChat截图4",
+      "date": "2026-07-07",
+      "location": "VRChat",
+      "photographer": "yyuan",
+      "description": "VRChat虚拟世界截图"
+    },
+    {
+      "url": "VRChat_2026-07-07_02.png",
+      "title": "VRChat截图5",
+      "date": "2026-07-07",
+      "location": "VRChat",
+      "photographer": "yyuan",
+      "description": "VRChat虚拟世界截图"
+    }
+  ]
+}

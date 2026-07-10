@@ -105,6 +105,15 @@ npm run dev
 
 ### 新用户快速上手
 
+> **Fork 了本项目？** 先运行一键重置脚本清空原作者的个人数据：
+> ```bash
+> # Windows
+> .\scripts\reset-personal-data.bat
+>
+> # macOS/Linux
+> # 暂无一键脚本，手动删除：backend/content/ 下的 .md/.jpg/.mp3 文件
+> ```
+
 克隆项目后，按以下步骤配置个人信息：
 
 1. **复制用户配置模板**
