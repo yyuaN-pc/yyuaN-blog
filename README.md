@@ -161,8 +161,9 @@ npm run dev
 4. 点击 **Advanced** → **Add Environment Variable**，添加：
 
    | 变量 | 值 |
-   |------|-----|
+   |------|------|
    | `PORT` | `5000` |
+   | `PUBLIC_URL` | `https://yy-blog-api.onrender.com`（替换为你的 Render 地址） |
    | `CLIENT_URL` | `*`（上线后再改为前端域名） |
 
 5. 点击 **Create Web Service**，等待部署完成
@@ -189,8 +190,12 @@ npm run dev
    |------|-----|
    | `VITE_API_BASE` | `https://yy-blog-api.onrender.com`（替换为你的 Render 地址） |
 
-5. 点击 **Deploy**，等待部署完成
-6. 成功后你会得到一个 URL：`https://yy-blog.vercel.app`
+4. 点击 **Deploy**，等待部署完成
+5. 成功后你会得到一个 URL：`https://yy-blog.vercel.app`
+
+> **注意**：前端通过 `VITE_API_BASE` 直接请求 Render 后端 API，同时后端返回的图片、音频 URL 也是指向 Render 的绝对地址。
+>
+> 因此**不要**在 Vercel 项目设置 API 重写（`vercel.json`）或反向代理，前后端通过环境变量直连即可。
 
 ---
 
@@ -221,19 +226,26 @@ npm run dev
 
 ### 后续更新内容
 
-SSH 不需要，直接在 **Render Dashboard** → 你的 Web Service → **Shell** 选项卡（或通过 SFTP 工具连接），在 `backend/content/` 目录下添加文件即可自动生效。
+添加笔记、照片、音乐后，推送 GitHub 即可自动触发 Vercel 和 Render 重新部署：
 
-或者将 `backend/content/` 目录单独放到 GitHub 仓库，每次推送 Render 会自动重新部署。
+```bash
+git add .
+git commit -m "update: 添加新笔记"
+git push
+```
+
+等待约 2-3 分钟部署完成，刷新前端即可看到变更。
 
 ---
 
 ### 环境变量参考
 
-| 变量 | 平台 | 说明 | 示例 |
-|------|------|------|------|
-| `VITE_API_BASE` | Vercel | 后端 API 完整地址 | `https://yy-blog-api.onrender.com` |
-| `PORT` | Render | 后端服务端口 | `5000` |
-| `CLIENT_URL` | Render | CORS 允许的前端地址 | `https://yy-blog.vercel.app` |
+| 变量 | 平台 | 说明 | 必填 | 示例 |
+|------|------|------|------|------|
+| `VITE_API_BASE` | Vercel | 后端 API 完整地址 | 是 | `https://yy-blog-api.onrender.com` |
+| `PUBLIC_URL` | Render | 后端自身公网地址（图片/音频 URL 前缀） | 是 | `https://yy-blog-api.onrender.com` |
+| `PORT` | Render | 后端服务端口 | 否（默认 5000） | `5000` |
+| `CLIENT_URL` | Render | CORS 允许的前端地址 | 是 | `https://yy-blog.vercel.app` |
 
 ---
 
@@ -246,10 +258,15 @@ SSH 不需要，直接在 **Render Dashboard** → 你的 Web Service → **Shel
 
 ### 更新内容
 
-内容文件热生效，无需重新构建前端：
-1. SSH 登录服务器
-2. 在 `backend/content/` 目录下添加/修改文件
-3. 刷新前端页面即可看到变更
+内容文件在 GitHub 仓库中，提交推送后自动触发部署：
+
+```bash
+git add .
+git commit -m "update: 添加新笔记"
+git push
+```
+
+部署完成后刷新前端即可看到变更。
 
 ### 清除评论数据
 

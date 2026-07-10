@@ -11,6 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const CLIENT_URL = process.env.CLIENT_URL || "*";
+const PUBLIC_URL = process.env.PUBLIC_URL || "";
 
 app.use(
   cors({
@@ -119,7 +120,7 @@ function scanNotes() {
         // 解析 cover 路径
         let cover = frontmatter.cover || "";
         if (cover && !cover.startsWith("/") && !cover.startsWith("http")) {
-          cover = `/api/files/notes/${relativePath}/${cover.replace(/^\.\//, "")}`.replace(
+          cover = `${PUBLIC_URL}/api/files/notes/${relativePath}/${cover.replace(/^\.\//, "")}`.replace(
             /\/+/g,
             "/",
           );
@@ -208,7 +209,7 @@ app.get("/api/albums", (req, res) => {
         ...photo,
         url: photo.url.startsWith("http")
           ? photo.url
-          : `/api/files/photos/${albumId}/${photo.url.split("/").pop()}`,
+          : `${PUBLIC_URL}/api/files/photos/${albumId}/${photo.url.split("/").pop()}`,
       }));
 
       const album = {
@@ -263,7 +264,7 @@ app.get("/api/music/tracks", (req, res) => {
         id: `default_${nameWithoutExt}`,
         name,
         artist,
-        url: `/api/files/music/${file.name}`,
+        url: `${PUBLIC_URL}/api/files/music/${file.name}`,
       });
     }
 
@@ -290,7 +291,7 @@ app.get("/api/blog/info", (req, res) => {
   const welcomeText = userConfig.welcomeText || "Welcome!";
   const avatarFile = userConfig.avatar || "";
   const avatar = avatarFile
-    ? `/api/files/blog_infos/avatars/${avatarFile}`
+    ? `${PUBLIC_URL}/api/files/blog_infos/avatars/${avatarFile}`
     : "";
   const userSocialLinks = userConfig.socialLinks || [];
 

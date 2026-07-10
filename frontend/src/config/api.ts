@@ -3,8 +3,8 @@ const isLocal =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1";
 
-// 开发环境下使用相对路径（通过 Vite proxy 转发）
-// 生产环境下优先使用环境变量，无则用相对路径（通过 vercel.json 代理转发）
+// 生产环境下使用 VITE_API_BASE 环境变量（Vercel 上设置）
+// 若未设置则用空字符串（仅开发环境有效）
 const PROD_API_BASE = import.meta.env.VITE_API_BASE || "";
 
 export const API_BASE = isLocal ? "" : PROD_API_BASE;
