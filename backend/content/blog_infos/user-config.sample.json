@@ -1,0 +1,10 @@
+{
+  "name": "Your Name",
+  "welcomeText": "Welcome to my website!",
+  "avatar": "（将头像文件放入 avatars/ 目录，此处填写文件名）",
+  "socialLinks": [
+    { "name": "github", "url": "https://github.com/your-username", "icon": "github" },
+    { "name": "bilibili", "url": "https://space.bilibili.com/your-uid", "icon": "bilibili" },
+    { "name": "qq", "url": "（联系方式链接）", "icon": "qq" }
+  ]
+}
