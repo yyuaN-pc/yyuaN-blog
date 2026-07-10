@@ -4,10 +4,8 @@ const isLocal =
   window.location.hostname === "127.0.0.1";
 
 // 开发环境下使用相对路径（通过 Vite proxy 转发）
-// 生产环境下优先使用环境变量，无则回退硬编码地址
-const PROD_API_BASE =
-  import.meta.env.VITE_API_BASE ||
-  "https://bilibili-audio-api.onrender.com";
+// 生产环境下优先使用环境变量，无则用相对路径（通过 vercel.json 代理转发）
+const PROD_API_BASE = import.meta.env.VITE_API_BASE || "";
 
 export const API_BASE = isLocal ? "" : PROD_API_BASE;
 
