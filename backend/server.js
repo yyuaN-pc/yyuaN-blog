@@ -120,10 +120,7 @@ function scanNotes() {
         // 解析 cover 路径
         let cover = frontmatter.cover || "";
         if (cover && !cover.startsWith("/") && !cover.startsWith("http")) {
-          cover = `${PUBLIC_URL}/api/files/notes/${relativePath}/${cover.replace(/^\.\//, "")}`.replace(
-            /\/+/g,
-            "/",
-          );
+          cover = `${PUBLIC_URL}/api/files/notes/${relativePath}/${cover.replace(/^\.\//, "")}`;
         }
 
         notes.push({

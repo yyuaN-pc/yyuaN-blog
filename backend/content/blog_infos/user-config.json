@@ -1,0 +1,10 @@
+{
+  "name": "歪歪uan",
+  "welcomeText": "Welcome to my website!",
+  "avatar": "a_01.png",
+  "socialLinks": [
+    { "name": "github", "url": "https://github.com/", "icon": "github" },
+    { "name": "bilibili", "url": "https://space.bilibili.com/398002085", "icon": "bilibili" },
+    { "name": "qq", "url": "tencent://message/?uin=594101002&Site=qq&Menu=yes", "icon": "qq" }
+  ]
+}
