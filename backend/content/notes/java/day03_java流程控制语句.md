@@ -1,9 +1,9 @@
 ---
 title: Java流程控制语句
 category: java
-date: 2026年7月3日
-datetime: 2026-07-03T00:00:00.000Z
-wordCount: 约 2500 字
+date: 2026年6月3日
+datetime: 2026-06-03T00:00:00.000Z
+wordCount: 约 2200 字
 readTime: 预计 12 分钟
 excerpt: 学习了顺序结构、分支结构（if、switch）和循环结构（for、while、do-while），以及break和continue跳转语句，包含大量实用代码案例。
 tags: [Java,后端开发]

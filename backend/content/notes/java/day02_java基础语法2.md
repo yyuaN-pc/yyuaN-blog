@@ -1,9 +1,9 @@
 ---
 title: Java基础语法（运算符与方法）
 category: java
-date: 2026年7月2日
-datetime: 2026-07-02T00:00:00.000Z
-wordCount: 约 2000 字
+date: 2026年6月2日
+datetime: 2026-06-02T00:00:00.000Z
+wordCount: 约 1900 字
 readTime: 预计 10 分钟
 excerpt: 学习了Java中各类运算符（算术、赋值、关系、逻辑、三元）的用法，以及方法/函数的定义和调用格式，包含丰富的代码案例。
 tags: [Java,Scanner,后端开发]

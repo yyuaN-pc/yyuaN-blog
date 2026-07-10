@@ -1,9 +1,9 @@
 ---
 title: Java数组
 category: java
-date: 2026年7月4日
-datetime: 2026-07-04T00:00:00.000Z
-wordCount: 约 2000 字
+date: 2026年6月4日
+datetime: 2026-06-04T00:00:00.000Z
+wordCount: 约 1800 字
 readTime: 预计 10 分钟
 excerpt: 学习了数组的定义与初始化、元素访问与遍历、常见异常（索引越界、空指针）、数组工具类使用，以及二维数组的基本用法。
 tags: [Java, 数据结构, 后端开发]

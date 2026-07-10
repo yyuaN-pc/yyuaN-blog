@@ -1,9 +1,9 @@
 ---
 title: Java面向对象基础
 category: java
-date: 2026年7月5日
-datetime: 2026-07-05T00:00:00.000Z
-wordCount: 约 2500 字
+date: 2026年6月5日
+datetime: 2026-06-05T00:00:00.000Z
+wordCount: 约 2300 字
 readTime: 预计 12 分钟
 excerpt: 学习了类与对象的定义和使用、this关键字、构造方法、封装思想、权限修饰符、标准JavaBean以及static关键字和工具类。
 tags: [Java, 类与对象, 后端开发]

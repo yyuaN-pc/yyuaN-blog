@@ -1,9 +1,9 @@
 ---
 title: Java开发环境搭建和基础语法
 category: java
-date: 2026年7月1日
-datetime: 2026-07-01T00:00:00.000Z
-wordCount: 约 1500 字
+date: 2026年6月1日
+datetime: 2026-06-01T00:00:00.000Z
+wordCount: 约 1200 字
 readTime: 预计 8 分钟
 excerpt: 完成了JDK和IDEA的安装与环境配置，创建了第一个Java项目，并学习了变量、数据类型、标识符、常量等基础语法知识。
 tags: [Java, JDK, IDEA, 后端开发]
