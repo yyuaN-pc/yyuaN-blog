@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
 
 export const socialLinks: SocialLink[] = [
   { name: "github", url: "https://github.com/yyuaN-pc", icon: "github" },
-  { name: "bilibili", url: "https://space.bilibili.com/your-uid", icon: "bilibili" },
+  { name: "bilibili", url: "https://space.bilibili.com/398002085", icon: "bilibili" },
 ];
 
 export const hitokotos: Hitokoto[] = [

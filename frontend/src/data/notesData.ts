@@ -5,6 +5,7 @@ export const categories: Category[] = [
   { id: "java", name: "Java笔记" },
   { id: "frontend", name: "前端笔记" },
   { id: "database", name: "数据库笔记" },
+  { id: "vue", name: "Vue笔记" },
 ];
 
 // 缓存笔记列表

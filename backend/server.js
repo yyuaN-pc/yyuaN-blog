@@ -99,6 +99,7 @@ function scanNotes() {
     { id: "java", name: "Java笔记" },
     { id: "frontend", name: "前端笔记" },
     { id: "database", name: "数据库笔记" },
+    { id: "vue", name: "Vue笔记" },
   ];
 
   function walkDir(dirPath, relativePath) {
