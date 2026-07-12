@@ -7,7 +7,7 @@ wordCount: 约 980 字
 readTime: 预计 5 分钟
 excerpt: 学习Vuex 4的核心概念，包括state、getters、mutations、actions和模块化开发，掌握Vue3中集中式状态管理的完整方案。
 tags: [Vue3, Vuex]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vuex%20state%20management%20diagram%20with%20state%20getter%20mutation%20action%20flow%20minimalist&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vuex 状态管理

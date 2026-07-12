@@ -7,7 +7,7 @@ wordCount: 约 990 字
 readTime: 预计 5 分钟
 excerpt: 学习Pinia——Vue3推荐的新一代状态管理方案，掌握defineStore、Setup Store语法、Actions和插件系统，替代传统的Vuex方案。
 tags: [Vue3, Pinia]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Pinia%20state%20management%20Vue.js%203%20modern%20store%20concept%20with%20berry%20logo%20minimalist&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Pinia 状态管理

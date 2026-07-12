@@ -7,7 +7,7 @@ wordCount: 约 1160 字
 readTime: 预计 6 分钟
 excerpt: 深入掌握Vue3的条件渲染（v-if/v-show）和列表渲染（v-for）指令，以及自定义指令的创建与使用，高效实现页面的动态展示与数据遍历。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20conditional%20and%20list%20rendering%20visualization%20with%20v-if%20v-for%20code%20examples%20minimalist%20design&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 条件渲染与列表渲染

@@ -7,7 +7,7 @@ wordCount: 约 780 字
 readTime: 预计 4 分钟
 excerpt: 掌握Vue3中动态绑定HTML Class和内联样式（Style）的多种语法，包括对象语法、数组语法及组件上的样式绑定。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20CSS%20class%20and%20style%20binding%20visualization%20with%20colorful%20style%20tokens%20minimalist&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 Class 与 Style 绑定详解

@@ -3,6 +3,8 @@
 
 一个前后端分离的个人博客系统，支持 Markdown 笔记管理、旅行相册展示、B 站音频提取、音乐播放、评论互动等功能。
 
+> **在线访问**：[https://yyuan-blog.vercel.app](https://yyuan-blog.vercel.app) — 前端部署于 Vercel，后端部署于 Render
+
 ## 技术栈
 
 | 分类 | 技术 |

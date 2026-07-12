@@ -7,7 +7,7 @@ wordCount: 约 740 字
 readTime: 预计 4 分钟
 excerpt: 掌握Element Plus的布局容器、24分栏栅格系统以及内置的过渡动画类，快速构建页面框架。
 tags: [Vue3, Element Plus]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Element%20Plus%20layout%20components%20with%20container%20and%20grid%20system%20visualization%20modern%20UI&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Element Plus 布局与过渡动画

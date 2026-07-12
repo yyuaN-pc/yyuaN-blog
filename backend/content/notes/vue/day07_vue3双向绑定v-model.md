@@ -7,7 +7,7 @@ wordCount: 约 1060 字
 readTime: 预计 5 分钟
 excerpt: 深入掌握Vue3中v-model指令的实现原理与用法，包括表单元素绑定、修饰符以及组件上的自定义v-model，实现高效的数据双向绑定。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20v-model%20two-way%20binding%20concept%20diagram%20with%20form%20elements%20and%20data%20flow%20arrows&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 双向绑定 v-model 详解

@@ -7,7 +7,7 @@ wordCount: 约 1430 字
 readTime: 预计 7 分钟
 excerpt: 掌握Element Plus的数据展示组件（表格、标签、进度条、树形控件、分页）和进阶表单组件（上传、日期选择器、穿梭框、评分等），构建完整的数据管理界面。
 tags: [Vue3, Element Plus]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Element%20Plus%20data%20table%20pagination%20and%20upload%20components%20modern%20dashboard%20UI&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Element Plus 数据展示与进阶表单组件

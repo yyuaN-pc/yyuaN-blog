@@ -7,7 +7,7 @@ wordCount: 约 700 字
 readTime: 预计 3 分钟
 excerpt: 了解移动端组件库Vant和企业级组件库Ant Design Vue的特性与核心组件，为不同类型项目选择合适UI库。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vant%20mobile%20and%20Ant%20Design%20Vue%20enterprise%20component%20library%20comparison%20modern%20UI&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vant 与 Ant Design Vue 组件库

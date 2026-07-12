@@ -7,7 +7,7 @@ wordCount: 约 1440 字
 readTime: 预计 7 分钟
 excerpt: 全面掌握Element Plus表单组件体系，包括表单容器验证规则、输入框、选择器、级联选择等核心表单元素的使用方法。
 tags: [Vue3, Element Plus]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Element%20Plus%20form%20components%20with%20input%20select%20cascader%20modern%20web%20design&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Element Plus 表单组件详解

@@ -7,7 +7,7 @@ wordCount: 约 1420 字
 readTime: 预计 7 分钟
 excerpt: 深入学习Element Plus的导航类组件（菜单、标签页、面包屑、步骤条）和高级组件（对话框、抽屉、卡片、走马灯），掌握后台管理页面的构建方法。
 tags: [Vue3, Element Plus]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Element%20Plus%20navigation%20menu%20dialog%20and%20advanced%20components%20admin%20dashboard%20UI&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Element Plus 导航类与高级组件

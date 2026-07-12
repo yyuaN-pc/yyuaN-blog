@@ -2,11 +2,7 @@
   <div class="note-detail" v-if="note">
     <!-- 顶部封面 -->
     <div class="note-hero">
-      <div
-        class="hero-cover"
-        :style="{ backgroundImage: `url(${note.cover})` }"
-      ></div>
-      <div class="hero-overlay"></div>
+      <div class="hero-cover hero-cover-black"></div>
       <div class="hero-content">
         <h1 class="hero-title">{{ note.title }}</h1>
         <div class="hero-meta">
@@ -400,24 +396,10 @@ watch(noteId, async (newId, oldId) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(2px);
-  transform: scale(1.05);
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.5) 60%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+.hero-cover-black {
+  background: #000000;
 }
 
 .hero-content {

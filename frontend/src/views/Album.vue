@@ -2,11 +2,7 @@
   <div class="album-page">
     <!-- 封面区域 -->
     <div class="album-hero">
-      <div
-        class="hero-cover"
-        :style="{ backgroundImage: `url(${coverImage})` }"
-      ></div>
-      <div class="hero-overlay"></div>
+      <div class="hero-cover hero-cover-teal"></div>
       <!-- 波浪过渡 -->
       <WaveDivider />
     </div>
@@ -14,7 +10,9 @@
     <!-- 主体内容 -->
     <div class="album-body">
       <div class="album-card">
-        <div class="sub-album-grid">
+        <!-- 加载骨架 -->
+        <LoadingSkeleton v-if="loading" type="grid" :count="4" />
+        <div v-else class="sub-album-grid">
           <div
             v-for="album in subAlbums"
             :key="album.id"
@@ -40,15 +38,20 @@
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import WaveDivider from "../components/WaveDivider.vue";
-import coverImage from "../assets/album-cover.svg";
+import LoadingSkeleton from "../components/LoadingSkeleton.vue";
 import type { SubAlbum } from "../types/album";
 import { getSubAlbums } from "../data/photosData";
 
 const router = useRouter();
 const subAlbums = ref<SubAlbum[]>([]);
+const loading = ref(true);
 
 onMounted(async () => {
-  subAlbums.value = await getSubAlbums();
+  try {
+    subAlbums.value = await getSubAlbums();
+  } finally {
+    loading.value = false;
+  }
 });
 
 function goToAlbum(id: string): void {
@@ -77,17 +80,10 @@ function goToAlbum(id: string): void {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+.hero-cover-teal {
+  background: #00695c;
 }
 
 /* 主体内容 */

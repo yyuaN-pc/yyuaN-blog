@@ -7,7 +7,7 @@ wordCount: 约 780 字
 readTime: 预计 4 分钟
 excerpt: 快速上手Element Plus的按钮、链接、滚动条等基础组件，以及消息提示、通知、警告等反馈类组件，构建页面交互的基础元素。
 tags: [Vue3, Element Plus]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Element%20Plus%20UI%20components%20buttons%20alerts%20notifications%20modern%20web%20interface%20design&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Element Plus 基础组件与反馈类组件

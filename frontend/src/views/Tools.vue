@@ -2,11 +2,7 @@
   <div class="tools-page">
     <!-- 封面区域 -->
     <div class="tools-hero">
-      <div
-        class="hero-cover"
-        :style="{ backgroundImage: `url(${coverImage})` }"
-      ></div>
-      <div class="hero-overlay"></div>
+      <div class="hero-cover hero-cover-navy"></div>
       <WaveDivider />
     </div>
 
@@ -62,7 +58,6 @@ import WaveDivider from "../components/WaveDivider.vue";
 import CommentSection from "../components/CommentSection.vue";
 import VideoToAudio from "../components/tools/VideoToAudio.vue";
 import UsefulLinks from "../components/tools/UsefulLinks.vue";
-import coverImage from "../assets/tools-cover.svg";
 import type { Tool } from "../types";
 
 const tools: Tool[] = [
@@ -94,17 +89,10 @@ const activeTool = ref<string>("");
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
+.hero-cover-navy {
+  background: #0a3d62;
 }
 
 /* 主体内容 */

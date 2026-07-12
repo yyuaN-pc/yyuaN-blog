@@ -7,7 +7,7 @@ wordCount: 约 1100 字
 readTime: 预计 6 分钟
 excerpt: 掌握Vue3组件间的通信方式，重点学习自定义事件（$emit）和插槽（Slot）机制，包括命名插槽、作用域插槽和解构插槽Prop的高级用法。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20component%20communication%20with%20slots%20and%20emit%20events%20diagram%20minimalist%20style&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 组件通信与插槽

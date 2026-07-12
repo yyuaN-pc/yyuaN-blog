@@ -28,62 +28,67 @@
     <!-- 文章列表 -->
     <div class="articles-body">
       <div class="container">
-        <div class="filter-info" v-if="selectedTags.size > 0">
-          <span>
-            已选择 {{ selectedTags.size }} 个标签，找到
-            {{ filteredPosts.length }} 篇文章
-          </span>
-          <button class="clear-btn" @click="clearTags">清除筛选</button>
-        </div>
+        <!-- 加载骨架 -->
+        <LoadingSkeleton v-if="loading" type="card" :count="5" />
 
-        <div class="posts-list" v-if="filteredPosts.length">
-          <article
-            v-for="post in filteredPosts"
-            :key="post.id"
-            class="post card"
-            @click="goToArticle(post.id)"
-          >
-            <header class="post-header">
-              <div class="cover-container">
-                <img
-                  :src="post.cover"
-                  :alt="post.title + '-cover'"
-                  class="cover-image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="header-content">
-                <div class="title">
-                  <h2 class="name">{{ post.title }}</h2>
+        <template v-else>
+          <div class="filter-info" v-if="selectedTags.size > 0">
+            <span>
+              已选择 {{ selectedTags.size }} 个标签，找到
+              {{ filteredPosts.length }} 篇文章
+            </span>
+            <button class="clear-btn" @click="clearTags">清除筛选</button>
+          </div>
+
+          <div class="posts-list" v-if="filteredPosts.length">
+            <article
+              v-for="post in filteredPosts"
+              :key="post.id"
+              class="post card"
+              @click="goToArticle(post.id)"
+            >
+              <header class="post-header">
+                <div class="cover-container">
+                  <img
+                    :src="post.cover"
+                    :alt="post.title + '-cover'"
+                    class="cover-image"
+                    loading="lazy"
+                  />
                 </div>
-                <div class="meta-info-bar">
-                  <IconCalendarTime class="meta-icon" size="18" stroke="1.5" />
-                  <div class="time-info">
-                    <time :datetime="post.datetime">{{ post.date }}</time>
+                <div class="header-content">
+                  <div class="title">
+                    <h2 class="name">{{ post.title }}</h2>
                   </div>
-                  <div class="separator"></div>
-                  <IconArticle class="meta-icon" size="18" stroke="1.5" />
-                  <div class="time-info">{{ post.wordCount }}</div>
-                  <div class="separator"></div>
-                  <IconClock class="meta-icon" size="18" stroke="1.5" />
-                  <div class="time-info">{{ post.readTime }}</div>
+                  <div class="meta-info-bar">
+                    <IconCalendarTime class="meta-icon" size="18" stroke="1.5" />
+                    <div class="time-info">
+                      <time :datetime="post.datetime">{{ post.date }}</time>
+                    </div>
+                    <div class="separator"></div>
+                    <IconArticle class="meta-icon" size="18" stroke="1.5" />
+                    <div class="time-info">{{ post.wordCount }}</div>
+                    <div class="separator"></div>
+                    <IconClock class="meta-icon" size="18" stroke="1.5" />
+                    <div class="time-info">{{ post.readTime }}</div>
+                  </div>
+                  <ul class="tags" v-if="post.tags && post.tags.length">
+                    <li v-for="tag in post.tags" :key="tag">
+                      <span class="tag-link">{{ tag }}</span>
+                    </li>
+                  </ul>
+                  <div class="excerpt">
+                    <p>{{ post.excerpt }}</p>
+                  </div>
                 </div>
-                <ul class="tags" v-if="post.tags && post.tags.length">
-                  <li v-for="tag in post.tags" :key="tag">
-                    <span class="tag-link">{{ tag }}</span>
-                  </li>
-                </ul>
-                <div class="excerpt">
-                  <p>{{ post.excerpt }}</p>
-                </div>
-              </div>
-            </header>
-          </article>
-        </div>
+              </header>
+            </article>
+          </div>
 
-        <div class="no-results" v-else>
-          <p>没有找到匹配的文章</p>
-        </div>
+          <div class="no-results" v-else>
+            <p>没有找到匹配的文章</p>
+          </div>
+        </template>
       </div>
     </div>
   </div>
@@ -94,15 +99,21 @@ import { computed, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { IconCalendarTime, IconArticle, IconClock } from "@tabler/icons-vue";
 import WaveDivider from "../components/WaveDivider.vue";
+import LoadingSkeleton from "../components/LoadingSkeleton.vue";
 import type { Note } from "../types";
 import { getNotes } from "../data/notesData";
 import coverImage from "../assets/articles-cover.svg";
 
 const router = useRouter();
 const notes = ref<Note[]>([]);
+const loading = ref(true);
 
 onMounted(async () => {
-  notes.value = await getNotes();
+  try {
+    notes.value = await getNotes();
+  } finally {
+    loading.value = false;
+  }
 });
 
 // 从所有笔记中提取不重复的标签

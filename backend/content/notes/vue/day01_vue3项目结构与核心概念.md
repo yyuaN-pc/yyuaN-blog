@@ -7,7 +7,7 @@ wordCount: 约 680 字
 readTime: 预计 3 分钟
 excerpt: 了解Vue3项目的基本结构、渐进式框架的设计理念以及组件化开发的核心理念，为后续深入学习Vue3打下基础。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Modern%20Vue.js%20project%20structure%20diagram%20with%20folder%20tree%20and%20component%20architecture%20visualization%20minimalist%20style&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 项目结构与核心概念

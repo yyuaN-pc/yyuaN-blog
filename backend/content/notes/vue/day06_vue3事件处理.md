@@ -7,7 +7,7 @@ wordCount: 约 920 字
 readTime: 预计 5 分钟
 excerpt: 掌握Vue3事件处理机制，包括事件监听、事件修饰符、按键修饰符、系统修饰键及组件上的事件处理，实现高效的交互逻辑。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20event%20handling%20visualization%20with%20click%20keyboard%20and%20modifier%20keys%20minimalist%20design&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 事件处理全面指南

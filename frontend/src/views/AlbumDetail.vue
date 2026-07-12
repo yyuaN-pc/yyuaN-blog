@@ -12,7 +12,9 @@
 
     <!-- 主体内容 -->
     <div class="album-body">
-      <div class="album-card" v-if="currentAlbum">
+      <!-- 加载骨架 -->
+      <LoadingSkeleton v-if="loading" type="content" />
+      <div class="album-card" v-else-if="currentAlbum">
         <!-- 左侧区域 -->
         <div class="left-panel">
           <!-- 标题和页码 -->
@@ -144,6 +146,7 @@ import {
 } from "@tabler/icons-vue";
 import WaveDivider from "../components/WaveDivider.vue";
 import CommentSection from "../components/CommentSection.vue";
+import LoadingSkeleton from "../components/LoadingSkeleton.vue";
 import coverImage from "../assets/album-cover.svg";
 import type { Photo, GridPhoto, GridRow, AlbumInfo } from "../types/album";
 import { getAlbumById } from "../data/photosData";
@@ -154,9 +157,14 @@ const router = useRouter();
 const albumId = computed(() => route.params.id as string);
 const currentAlbum = ref<AlbumInfo | undefined>();
 const photos = computed(() => currentAlbum.value?.photos || []);
+const loading = ref(true);
 
 onMounted(async () => {
-  currentAlbum.value = await getAlbumById(albumId.value);
+  try {
+    currentAlbum.value = await getAlbumById(albumId.value);
+  } finally {
+    loading.value = false;
+  }
 });
 
 const displayMode = ref<"single" | "grid">("single");

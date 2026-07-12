@@ -7,7 +7,7 @@ wordCount: 约 950 字
 readTime: 预计 5 分钟
 excerpt: 学习Vue3中计算属性（computed）和侦听器（watch/watchEffect）的用法与区别，掌握响应式数据派生的最佳实践。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20computed%20properties%20and%20watchers%20concept%20diagram%20with%20data%20flow%20arrows%20minimalist%20style&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 计算属性与侦听器

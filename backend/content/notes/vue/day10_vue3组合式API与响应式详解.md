@@ -7,7 +7,7 @@ wordCount: 约 1320 字
 readTime: 预计 7 分钟
 excerpt: 深入学习Vue3的Composition API（setup、ref、reactive等）以及响应式系统的核心原理，掌握构建复杂逻辑的最佳实践。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20Composition%20API%20and%20reactive%20system%20with%20Proxy%20diagram%20modern%20minimalist%20style&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 Composition API 与响应式详解

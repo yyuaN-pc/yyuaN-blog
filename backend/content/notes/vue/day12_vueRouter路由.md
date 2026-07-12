@@ -7,7 +7,7 @@ wordCount: 约 1420 字
 readTime: 预计 7 分钟
 excerpt: 深入学习Vue Router 4的核心功能，包括路由模式、动态路由传参、导航守卫、路由懒加载及命名视图等，掌握单页应用的路由管理。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue%20Router%204%20navigation%20route%20diagram%20with%20URL%20paths%20and%20guards%20minimalist%20style&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue Router 路由全面指南

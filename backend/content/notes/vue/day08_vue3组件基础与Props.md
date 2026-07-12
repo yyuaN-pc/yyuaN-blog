@@ -7,7 +7,7 @@ wordCount: 约 1120 字
 readTime: 预计 6 分钟
 excerpt: 学习Vue3组件的注册方式、Props的类型验证与单向数据流机制，以及组件的属性继承控制，掌握组件化的基础实践。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20component%20props%20and%20component%20registration%20visualization%20with%20parent-child%20data%20flow&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 组件基础与 Props

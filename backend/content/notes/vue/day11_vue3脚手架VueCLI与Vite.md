@@ -7,7 +7,7 @@ wordCount: 约 1080 字
 readTime: 预计 5 分钟
 excerpt: 对比Vue CLI（Webpack）和Vite两种构建工具的差异，掌握Vite的配置优化、跨域代理和性能调优策略，搭建高效的Vue3开发环境。
 tags: [Vue3, Vite]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20Vite%20vs%20Vue%20CLI%20comparison%20with%20lightning%20fast%20HMR%20concept%20modern%20design&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 脚手架：Vue CLI 与 Vite

@@ -7,7 +7,7 @@ wordCount: 约 1050 字
 readTime: 预计 5 分钟
 excerpt: 全面了解Vue3的模板语法，包括文本插值、HTML渲染、指令系统以及常用内置指令的用法，掌握数据驱动视图的核心机制。
 tags: [Vue3]
-cover: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Vue.js%20template%20syntax%20visualization%20with%20double%20curly%20braces%20and%20directives%20code%20snippets%20dark%20theme&image_size=landscape_4_3"
+cover: "./covers/vue.png"
 ---
 
 # Vue3 模板语法与基本指令
